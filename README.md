@@ -49,7 +49,18 @@ Adapter 1 is attached to NAT and 2 as internal network.
 Click on finish and start the VM, this will take some time to copy all the necessary files and install the server.
 I will then create first admin account and log into my server. 
 
-**Active Directory Deployment**: Installed and configured Active Directory Domain Services (AD DS) on the designated Domain Controller.
+![image](https://github.com/nahid7474/AD/assets/170605912/76e47127-c9f2-4c86-82c8-6365f624507e)
+
+Also, checked that I have two network adapters are present as defined previously.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/4a030a71-831c-429d-b056-a74b0f57b52f)
+
+Also, as per my network diagram, I'll assign the internal NIC an IP of 172.16.0.1 with a subnet mask of 24.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/805f0314-0d09-4a09-8f53-71ee53200223)
+
+
+**ADDS Deployment**: 
 The server manager pops up immediately I am logged in, from there I will now add Active Directory Domain Services and click next.
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/6c4a62d2-de23-4b69-9fc1-3f3d2e6092db)
@@ -70,5 +81,19 @@ I will now promote this server as a domain controller by adding a new forest fro
 I will name the forest as "NahidHomeLab.com" and click Next.
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/cd651703-66e3-4bb1-ace5-106a6301173f)
+
+On the next window, will add the Directory Services Restore Mode password and click Next.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/e9c832ed-ae9c-4399-a1f4-7771b7fa81e8)
+
+
+Will follow the promppt to finish this installation and restart our server.
+Now that I have my ADDS set up successfully, it comes up with the option to log in as a domain admin as expected.
+
+
+![image](https://github.com/nahid7474/AD/assets/170605912/a14b9a10-86c5-46a4-97ef-43182a37dfea)
+
+
+
 
 
