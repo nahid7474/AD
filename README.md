@@ -163,7 +163,54 @@ Choose the network interface that is external, has internet and click Next
 Finish the wizarz and refresh the DC.
 It appears with green Icons, up arrows etc indicating I have configured it successfully.
 
+![image](https://github.com/nahid7474/AD/assets/170605912/bfdb46a5-e5e5-48e3-a1e7-95bbfe0e40a3)
 
 
+**DHCP Installation and Configuration**:
+From server manager, I will now add DHCP Services using the Add Roles and Features wizard.
+Follow along with the on screen prompt, Click next and then Install to finish the installation process.
 
+![image](https://github.com/nahid7474/AD/assets/170605912/3c9e3ab6-e07f-4298-8c68-54bcadaa05f4)
+
+
+Installed successfully, will now set up my scope so any new computer gets their IP address automatically from this DHCP server.
+From Tools menu, choose DHCP at te top right, and then right click on IPv4, Click New Scope
+
+![image](https://github.com/nahid7474/AD/assets/170605912/6d4bc694-ab6d-483e-af66-868f0a3abb24)
+
+
+Will keep the lease duration as 28 days, click Next
+
+![image](https://github.com/nahid7474/AD/assets/170605912/29be6b0d-c199-46f7-b121-175d8a87b699)
+
+Because NAT is configured on domain controller, I will add my domain controller's IP as router's default gateway in the next winsow and click Next.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/0ed1bf22-1b67-470f-ab6d-ec3889e32967)
+
+Our DC will act as a DNS server as this feature is already installed. 
+So again, I'll select the domain controller IP as DNS Server and click next. 
+
+ ![image](https://github.com/nahid7474/AD/assets/170605912/1924806e-ee18-4b1f-9c63-bd991a4d32e5)
+
+ 
+Activate the scope, Click Next. 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/4e763846-d399-4f6b-81f4-a79a011b3075)
+
+Now, right click on the DHCP server dc.nahidhomelab.com and then click “authorize” and refresh the domain. 
+Both IPv4 and IPv6 came with green ticks which represents that I have configured my DHCP Server successfully. 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/780d10a9-c436-42c2-9397-60c72277de83)
+
+
+**Client Virtual Machine Setup and Domain Join via PowerShell**
+Next step is to onboard a machine/a client computer to test the functionality of the DHCP, DNS and Routing and other services within the environment.
+
+Will now spin up an Windows 10 pro 64 bit VM in my virtual box and condider that as my client computer.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/dc68ae2c-7771-49ab-a908-5fe873960879)
+
+
+VM has spun up with the local user name of CLient1.
+Will now check it's network information to see if it has picked up my DHCP server that I configured earlier. 
 
