@@ -6,11 +6,11 @@ Summary of Activities:
 
 **Server Setup**: Installed and configured Windows Server 2019 on VirtualBox, establishing the initial network setup to support Active Directory services.
 
-**Active Directory Deployment**: Installed and configured Active Directory Domain Services (AD DS) on the designated Domain Controller.
+**Active Directory Deployment**: Installed and configured Active Directory Domain Services (AD DS) and DNS on the Domain Controller.
 
 **Forest Creation**: Added and deployed a new forest within the Active Directory environment.
 
-**Organizational Unit and Domain Admin Setu**p: Created a new Organizational Unit (OU), established a designated folder, and configured the first Domain Admin account with appropriate administrative roles.
+**Organizational Unit and Domain Admin Setup**: Created a new Organizational Unit (OU) for domain admin users, and configured the first Domain Admin account with appropriate administrative roles/group membership.
 
 **NAT Configuration**: Implemented Network Address Translation (NAT) to facilitate external network communication for the simulated corporate network.
 
@@ -92,6 +92,76 @@ Now that I have my ADDS set up successfully, it comes up with the option to log 
 
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/a14b9a10-86c5-46a4-97ef-43182a37dfea)
+
+Now that I am logged in with the default Administrator account, first thing I'll now do is, create an organization unit named _ADMINS within my Active Directory Users and COmputers
+
+![image](https://github.com/nahid7474/AD/assets/170605912/16879a09-29ff-46b2-b5e7-282d99679ac4)
+![image](https://github.com/nahid7474/AD/assets/170605912/e6b50a28-b7de-413c-8da6-576f65396d6d)
+
+Will create my first domain admin account in this newly created OU.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/9336fdef-b928-4941-b437-68e1983da5cc)
+
+
+Will check the password never expired for this admin account and leave other boxes unchecked.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/a0faa120-84cf-4d16-80b0-3c1b5f8e7a35)
+
+Click Next and finish the prompt to save the user details.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/f83078d6-eaf3-45d2-b8b0-b65caa79a07b)
+
+
+Will make this account a member of Domain Admins group to give it the priviledged access it requires to be a domain admin. 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/05acf83e-dff2-4a65-858d-06eaf886307b)
+
+
+I’ll now sign out and log in as a domain admin with my newly created domain admin account.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/e266f531-d7ec-4c79-8086-18099e91ee84)
+
+
+My DC is now ready with AD DS, DNS and File and Storage Services.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/4effd426-4830-4c53-992a-c99a0f0cf5ba)
+
+
+**NAT Configuration**: 
+Will now facilitate external network communication for this network. For routing purpose, to facilitate this I'll now add/configure NAT so that all my machines within this domain can have internet using one public IP.
+From the roles and features, I'll choose Remote Access this time, click Next.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/c2404094-afae-4062-aa01-5f535c777068)
+
+
+On the Role Services I'll keep the RAS and Routing boxes checked. Click Next, and Install by following the on screen prompts
+
+![image](https://github.com/nahid7474/AD/assets/170605912/61335985-c786-4c9f-8efd-1a12216339da)
+
+
+Features installation is now complete, will close this window.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/b06b08cc-d643-4f6d-9504-230660fe2f6b)
+
+
+This requires additional configuration to work. 
+From the Tools menu at the top right, I'll select "ROuting and Remote Access" to bring up the consol to configure this. 
+RIght click DC and select COnfigure and EnableROuting and Remote Access.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/b261dade-c098-4b1b-b6e4-6bc63302889a)
+
+
+THe setup wizard will appear and select NAT, click Next
+
+![image](https://github.com/nahid7474/AD/assets/170605912/eb020150-06c6-4304-b5f6-2226275eb904)
+
+Choose the network interface that is external, has internet and click Next
+
+![image](https://github.com/nahid7474/AD/assets/170605912/a2d6414a-0c5c-4c9e-9742-b7eb8bc7f4a9)
+
+
+Finish the wizarz and refresh the DC.
+It appears with green Icons, up arrows etc indicating I have configured it successfully.
 
 
 
