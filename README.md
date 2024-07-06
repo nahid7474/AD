@@ -220,7 +220,13 @@ COntent of the scripts below
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/0c543eeb-5c7c-4c1f-82d9-b6b6e6a1c5fb)
 
-Quick explanation of this script: uses a variable called $PASSWORD_FOR_USERS where it stores a common password used for all 10 AD users. It then read the contents (10 user names; first and last) of my text file. It ensures that each user has a username derived from their first initial and full last name. Converts the plain text password into a secure string format suitable for use with Active Directory commands. Enables the user account immediately upon creation. It then place them in an organizational unit _USERS. It goes on a user creation look for each item until it finishes reading names.txt. 
+Quick explanation of this script: 
+This script uses a variable called $PASSWORD_FOR_USERS where it stores a common password used for all 10 AD users. 
+It then read the contents (10 user names; first and last) of my text file. 
+It ensures that each user has a username derived from their first initial and full last name. 
+Converts the plain text password into a secure string format suitable for use with Active Directory commands. 
+Enables the user account immediately upon creation. It then place them in an organizational unit _USERS. 
+It goes on a user creation look for each item until it finishes reading names.txt. 
 
 Will now navigate to the directory where the name and scripts live.
 
