@@ -206,6 +206,7 @@ Both IPv4 and IPv6 came with green ticks which represents that I have configured
 
 
 **Create Domain users via PowerShell**: 
+
 I will utilized PowerShell scripts to create 10 domain users in Active Directory.
 First, I will add all my user names on a notepad file (names.txt) and save them on desktop within a folder called names. 
 
