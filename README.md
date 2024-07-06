@@ -211,6 +211,61 @@ Will now spin up an Windows 10 pro 64 bit VM in my virtual box and condider that
 ![image](https://github.com/nahid7474/AD/assets/170605912/dc68ae2c-7771-49ab-a908-5fe873960879)
 
 
-VM has spun up with the local user name of CLient1.
-Will now check it's network information to see if it has picked up my DHCP server that I configured earlier. 
+VM has spun up with the local user name of **nahidlocal**.
+Will now check it's network information by running ipconfig command to see if it has picked up my DHCP server and DNS that I configured earlier. And it did!! :) 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/123ea450-25d6-4e33-828c-3547d20c3ffb)
+
+To test my routing is working ok, will run tracert and ping google.com from my local/client computer. 
+My client1 computer should use my DC to reach outside world/internet. 
+
+Results below indicate that I have connectivity from my client machine to all the way to default gateway which is the domain controller and domain controller is properly NAT'ing it and forwarding to Internet and then properly coming back to the client computer; so things are working as expected!!!
+
+![image](https://github.com/nahid7474/AD/assets/170605912/a56936cd-8c26-4999-9fe4-3030c474ac5d)
+
+Going back to my DHCP in domain controller, I can see this client computer listed in the address leases picking up the IP Address of 176.16.0.100
+
+![image](https://github.com/nahid7474/AD/assets/170605912/6bed09d1-ee2c-4a17-8fae-93e89763477e)
+
+
+**Domain Join client computer via PowerShell**: 
+I will now utilized PowerShell scripts to join my Windows 10 client computer to the Active Directory domain.
+
+From my client computer, I'll open Powershell as an administrator and run the command below 
+add-computer –domainname "nahidhomelab.com" -restart
+
+![image](https://github.com/nahid7474/AD/assets/170605912/d2374794-56a2-4cf0-963f-ba8fc8edb95f)
+
+
+Provide Domain Admin credentials and click ok. 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/ba98a32e-c3bb-4e2b-9529-a3801b754152)
+
+Machine took take some time to restart and configure and connect to the domain.
+Once computer comes back on from the restart, it provides me the option to log in as domain user; meaning that the computer is joined to the domain successfully 😊 
+
+I will now use one of the domain users that I had created previously with powershell to log into this domain joined computer (instead of using my local user credential).
+
+
+![image](https://github.com/nahid7474/AD/assets/170605912/10d1d2fe-0048-4dd7-acab-dfb9636971fc)
+
+
+Once I am logged in as nnahin10, in the system info I can now see my computer joined to my domain successfully. 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/f1681a8c-83af-4e12-8c29-29415d09c708)
+
+Run the sysinfo command to see more details.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/84bae12e-e10e-4a9a-9cbe-289d89bf85a7)
+
+
+I can now also see this domain joined computer in the DHCP address lease as expected.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/d7db5537-152f-408a-8940-8d5c3ba6649f)
+
+In addition, this computer I can find in my Active Directory user and computers as well.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/931ab8dc-b493-4080-8af5-57f3b420590a)
+
+This concludes my Active Directory Home lab Project!!
 
