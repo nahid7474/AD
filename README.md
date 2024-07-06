@@ -16,9 +16,11 @@ Summary of Activities:
 
 **DHCP Installation and Configuration**: Installed and configured DHCP services, defining IP address ranges and lease durations for dynamic network assignment.
 
+**Create Domain users via PowerShell**: Utilized PowerShell scripts to create 10 domain users in Active Directory.
+
 **Client Virtual Machine Setup**: Deployed a client computer as a Virtual Machine (VM) to test the functionality of the DHCP service within the network environment.
 
-**Domain Join via PowerShell**: Utilized PowerShell scripts to join a Windows 10 client computer to the Active Directory domain seamlessly.
+**Domain Join Windows 10 client computer via PowerShell**: Utilized PowerShell scripts to join a Windows 10 client computer to the Active Directory domain seamlessly.
 
 **Network Testing**: Conducted comprehensive testing to ensure both the server and client machines within the network environment were operational and functioning correctly.
 
@@ -201,6 +203,40 @@ Now, right click on the DHCP server dc.nahidhomelab.com and then click “author
 Both IPv4 and IPv6 came with green ticks which represents that I have configured my DHCP Server successfully. 
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/780d10a9-c436-42c2-9397-60c72277de83)
+
+
+**Create Domain users via PowerShell**: 
+I will utilized PowerShell scripts to create 10 domain users in Active Directory.
+First, I will add all my user names on a notepad file (names.txt) and save them on desktop within a folder called names. 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/ca21d9ba-1fc6-4173-b44a-1413f7cf0ec2)
+
+Start Powershell as administrator.
+
+![image](https://github.com/nahid7474/AD/assets/170605912/71735234-1c50-4ab4-aba7-38bc32619335)
+
+Will now prepare a powershell script and save it as 1_CREATE_USERS.PS1 
+COntent of the scripts below 
+
+![image](https://github.com/nahid7474/AD/assets/170605912/0c543eeb-5c7c-4c1f-82d9-b6b6e6a1c5fb)
+
+Quick explanation of this script: uses a variable called $PASSWORD_FOR_USERS where it stores a common password used for all 10 AD users. It then read the contents (10 user names; first and last) of my text file. It ensures that each user has a username derived from their first initial and full last name. Converts the plain text password into a secure string format suitable for use with Active Directory commands. Enables the user account immediately upon creation. It then place them in an organizational unit _USERS. It goes on a user creation look for each item until it finishes reading names.txt. 
+
+Will now navigate to the directory where the name and scripts live.
+
+PS C:\Users\a-nnahin\Desktop> cd C:\Users\a-nnahin\Desktop\names
+
+And then run this command below
+
+PS C:\Users\a-nnahin\Desktop\names> C:\Users\a-nnahin\Desktop\names\1_CREATE_USERS.ps1
+
+![image](https://github.com/nahid7474/AD/assets/170605912/1ccc83d6-f684-4e52-b8ab-f02b0bce12d9)
+
+All users are created successfully. 
+To veryfy this activity, I will now check my active directory users and computers.
+I can see all these users have been created successfully within the folder called _USERS which is fantastic!!!
+
+![image](https://github.com/nahid7474/AD/assets/170605912/851ec052-7068-4e83-9c8c-fabebe5269bd)
 
 
 **Client Virtual Machine Setup and Domain Join via PowerShell**
