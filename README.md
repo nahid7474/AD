@@ -246,6 +246,7 @@ I can see all these users have been created successfully within the folder calle
 
 
 **Client Virtual Machine Setup and Domain Join via PowerShell**
+
 Next step is to onboard a machine/a client computer to test the functionality of the DHCP, DNS and Routing and other services within the environment.
 
 Will now spin up an Windows 10 pro 64 bit VM in my virtual box and condider that as my client computer.
