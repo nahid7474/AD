@@ -34,6 +34,7 @@ I Will conduct the lab to achieve the goal of establishing the below network arc
 ![image](https://github.com/nahid7474/AD/assets/170605912/d12fdf65-2f65-4c02-acae-1211030ec6c3)
 
 **Server Installation**: 
+
 First, I have downloaded the windows server 2019 standard version and added that as a new VM it on my Oracle Virtual box.
 
 
@@ -50,6 +51,7 @@ Adapter 1 is attached to NAT and 2 as internal network.
 
 
 Click on finish and start the VM, this will take some time to copy all the necessary files and install the server.
+
 I will then create first admin account and log into my server. 
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/76e47127-c9f2-4c86-82c8-6365f624507e)
@@ -64,6 +66,7 @@ Also, as per my network diagram, I'll assign the internal NIC an IP of 172.16.0.
 
 
 **ADDS Deployment**: 
+
 The server manager pops up immediately I am logged in, from there I will now add Active Directory Domain Services and click next.
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/6c4a62d2-de23-4b69-9fc1-3f3d2e6092db)
@@ -131,6 +134,7 @@ My DC is now ready with AD DS, DNS and File and Storage Services.
 
 
 **NAT Configuration**: 
+
 Will now facilitate external network communication for this network. For routing purpose, to facilitate this I'll now add/configure NAT so that all my machines within this domain can have internet using one public IP.
 From the roles and features, I'll choose Remote Access this time, click Next.
 
@@ -170,6 +174,7 @@ It appears with green Icons, up arrows etc indicating I have configured it succe
 
 
 **DHCP Installation and Configuration**:
+
 From server manager, I will now add DHCP Services using the Add Roles and Features wizard.
 Follow along with the on screen prompt, Click next and then Install to finish the installation process.
 
