@@ -27,6 +27,7 @@
    These activities were undertaken to simulate key functionalities of a corporate network environment
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Creatd network diagram outlining the infrastructure for the network environment.
+
 I Will conduct the lab to achieve the goal of establishing the below network architecture as per my design.
  
 
