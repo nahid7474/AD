@@ -24,7 +24,7 @@
 
 - **Network Testing**: Conducted comprehensive testing to ensure both the server and client machines within the network environment were operational and functioning correctly.
 
-   These activities were undertaken to emulate and simulate key functionalities of a corporate network environment
+   These activities were undertaken to simulate key functionalities of a corporate network environment
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Creatd network diagram outlining the infrastructure for the network environment.
 I Will conduct the lab to achieve the goal of establishing the below network architecture as per my design.
