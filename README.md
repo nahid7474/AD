@@ -16,9 +16,7 @@
 
 - **DHCP Installation and Configuration**: Installed and configured DHCP services, defining IP address ranges and lease durations for dynamic network assignment.
 
-- **Install and Configure Remote Desktop Services RDS**
-
-- **Configure SSL Certificate for RDS with Quick Start Deployment**
+- **Install and Configure Remote Desktop Services**
 
 - **Create Domain users via PowerShell**: Utilized PowerShell scripts to create 10 domain users in Active Directory.
 
