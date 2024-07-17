@@ -169,7 +169,7 @@ Choose the network interface that is external, has internet and click Next
 ![image](https://github.com/nahid7474/AD/assets/170605912/a2d6414a-0c5c-4c9e-9742-b7eb8bc7f4a9)
 
 
-Finish the wizarz and refresh the DC.
+Finish the wizard and refresh the DC.
 It appears with green Icons, up arrows etc indicating I have configured it successfully.
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/bfdb46a5-e5e5-48e3-a1e7-95bbfe0e40a3)
@@ -226,9 +226,41 @@ Choose Quick Start and Next
 
 ![image](https://github.com/user-attachments/assets/38c5dce9-8bd4-4df0-9d2e-bde9b869af29)
 
-Choose vitual-machine based desktop deployment
+Choose session based desktop deployment, click Next  
 
-![image](https://github.com/user-attachments/assets/5b72a8dd-844c-4eb3-b035-4c2d429db1ed)
+![image](https://github.com/user-attachments/assets/2ffc4bef-b251-4066-9ff0-95734e2fb8dc)
+
+
+Choose locan server, click Next  
+This will install all 3 services (RD Connection broker, RD Web Access and RD session host) on the same server.  
+
+![image](https://github.com/user-attachments/assets/b60e51e0-3f2f-4712-bfe2-fdd8c354db5f)
+
+Check the Restart box and click Deploy  
+
+![image](https://github.com/user-attachments/assets/f418a81a-cf4d-4499-9a98-cefea262fd0e)
+
+It took 5 minutes to install all services with a restart, Click CLose  
+
+![image](https://github.com/user-attachments/assets/f4a67206-9825-4661-b6f6-83a98a269cc8)
+
+
+I have now services ready to test, click on Remote Desktop Services from the left (from server manager dashboard)  
+
+![image](https://github.com/user-attachments/assets/62651239-2ff1-4883-a9d2-4a703bcfaf1d)
+
+Deployment overview shows all deployed services.  
+
+![image](https://github.com/user-attachments/assets/ee37678d-63c7-4982-bd3e-a20ad01338db)
+
+By default, 3 app/programs are deployed on the RD web access site  
+
+![image](https://github.com/user-attachments/assets/a8731425-d760-4e9c-920c-105a04b62450)
+
+Now, I'll test these srvices from my client computer.  
+
+
+
 
 
 
