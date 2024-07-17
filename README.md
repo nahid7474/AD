@@ -18,6 +18,8 @@
 
 - **Install and Configure Remote Desktop Services RDS**
 
+- **Configure SSL Certificate for RDS with Quick Start Deployment**
+
 - **Create Domain users via PowerShell**: Utilized PowerShell scripts to create 10 domain users in Active Directory.
 
 - **Client Virtual Machine Setup**: Deployed a client computer as a Virtual Machine (VM) to test the functionality of the DHCP service within the network environment.
@@ -257,10 +259,30 @@ By default, 3 app/programs are deployed on the RD web access site
 
 ![image](https://github.com/user-attachments/assets/a8731425-d760-4e9c-920c-105a04b62450)
 
-Now, I'll test these srvices from my client computer.  
+Now, I'll test these srvices from my domain joined client1 computer with user nnahin10.  
+Open a browser and type https://dc.nahidhomelab.com/rdweb as URL and hit Enter.  
+
+![image](https://github.com/user-attachments/assets/fea663e5-6cec-4f63-8f91-ee6bdba087c2)
 
 
+use nahidhomelab\nnahin10 as user name and the correct password for this user. Click Enter  
+User is logged in successfully as wxpected, and can see those 3 default apps that are deployed there. 
 
+![image](https://github.com/user-attachments/assets/e5ff61c6-b02a-496b-a509-f8ba81e969a1)
+
+I'll now run the calculator app for test purpose  and click connect on the pop up  
+
+![image](https://github.com/user-attachments/assets/7a1358de-1a22-454c-a032-dd9c8e9b35f5)
+
+And here I am, I can now see the calculator app running  
+
+![image](https://github.com/user-attachments/assets/631cfc73-ecc5-4d0f-a9d8-ca77a065003d)
+
+Coming back to my RDP services on my DC, I can see an active connection from the user nnahin10 added on the list  
+
+![image](https://github.com/user-attachments/assets/be7634dc-eeb2-497e-b0c7-6e7f12bfda1a)
+
+This indicates that RDP services are functional. 
 
 
 
