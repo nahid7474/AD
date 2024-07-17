@@ -16,6 +16,8 @@
 
 - **DHCP Installation and Configuration**: Installed and configured DHCP services, defining IP address ranges and lease durations for dynamic network assignment.
 
+- **Install and Configure Remote Desktop Services RDS**
+
 - **Create Domain users via PowerShell**: Utilized PowerShell scripts to create 10 domain users in Active Directory.
 
 - **Client Virtual Machine Setup**: Deployed a client computer as a Virtual Machine (VM) to test the functionality of the DHCP service within the network environment.
@@ -209,6 +211,27 @@ Now, right click on the DHCP server dc.nahidhomelab.com and then click “author
 Both IPv4 and IPv6 came with green ticks which represents that I have configured my DHCP Server successfully. 
 
 ![image](https://github.com/nahid7474/AD/assets/170605912/780d10a9-c436-42c2-9397-60c72277de83)
+
+
+
+
+**Install and Configure Remote Desktop Services RDS**
+
+Click Add roles and features, select 'Remote Desktop Services installation'  
+Click Next  
+
+![image](https://github.com/user-attachments/assets/32f16035-25fa-46b4-8042-36909b9680f0)
+
+Choose Quick Start and Next  
+
+![image](https://github.com/user-attachments/assets/38c5dce9-8bd4-4df0-9d2e-bde9b869af29)
+
+Choose vitual-machine based desktop deployment
+
+![image](https://github.com/user-attachments/assets/5b72a8dd-844c-4eb3-b035-4c2d429db1ed)
+
+
+
 
 
 **Create Domain users via PowerShell**: 
